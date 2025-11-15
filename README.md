@@ -4,6 +4,12 @@ This directory contains the source code for the TextEdit application. TextEdit i
 
 ----
 
+## Update 15 Nov 2025
+
+Tested with Xcode 26.1.1 (Apple Silicon) on macOS 15.7.2 (Sequoia)
+
+----
+
 ## Update 19 Feb 2024
 
 This is a copy from the source code provided by Apple at <https://developer.apple.com/library/archive/samplecode/TextEdit/Introduction/Intro.html>, <https://developer.apple.com/library/archive/samplecode/TextEdit/TextEdit.zip>.
