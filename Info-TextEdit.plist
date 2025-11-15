@@ -212,7 +212,7 @@
 	<key>CFBundleIconFile</key>
 	<string>Edit.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.apple.TextEdit</string>
+	<string>com.apple.TextEdit.dev</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
