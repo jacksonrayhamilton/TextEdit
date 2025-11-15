@@ -64,7 +64,7 @@ enum {
 };
 typedef NSInteger HTMLStylingMode;
 
-@interface Preferences : NSWindowController {
+@interface Preferences : NSWindowController <NSWindowRestoration> {
     BOOL changingRTFFont;
     NSInteger originalDimensionFieldValue;
 }
