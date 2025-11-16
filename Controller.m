@@ -64,7 +64,7 @@ static NSDictionary *defaultValues() {
                 [NSNumber numberWithInteger:30], AutosavingDelay,
                 [NSNumber numberWithBool:NO], NumberPagesWhenPrinting,
                 [NSNumber numberWithBool:YES], WrapToFitWhenPrinting,
-                [NSNumber numberWithBool:YES], RichText, 
+                [NSNumber numberWithBool:NO], RichText,
                 [NSNumber numberWithBool:NO], ShowPageBreaks,
 				[NSNumber numberWithBool:NO], OpenPanelFollowsMainWindow,
 				[NSNumber numberWithBool:YES], AddExtensionToNewPlainTextFiles,
