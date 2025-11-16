@@ -596,7 +596,7 @@
 					"-e",
 					start,
 				);
-				VALID_ARCHS = "armv6 armv7 i386 x86_64";
+				VALID_ARCHS = "arm64 x86_64";
 				VERSIONING_SYSTEM = "apple-generic";
 				WARNING_CFLAGS = (
 					"-Wmost",
