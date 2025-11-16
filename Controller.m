@@ -110,6 +110,25 @@ static NSDictionary *defaultValues() {
     // Set up default values for preferences managed by NSUserDefaultsController
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultValues()];
     [[NSUserDefaultsController sharedUserDefaultsController] setInitialValues:defaultValues()];
+
+    // Set default plain text font to Menlo 14 if no user font preference exists
+    NSFont *currentFont = [NSFont userFixedPitchFontOfSize:0.0];
+    if (!currentFont || [currentFont pointSize] == 11.0) {
+        NSFont *menlo14 = [NSFont fontWithName:@"Menlo-Regular" size:14.0];
+        if (menlo14) {
+            [NSFont setUserFixedPitchFont:menlo14];
+        }
+    }
+
+    // Set default rich text font to Helvetica 14 if no user font preference exists
+    NSFont *currentRichFont = [NSFont userFontOfSize:0.0];
+    if (!currentRichFont || [currentRichFont pointSize] == 13.0 || [currentRichFont pointSize] == 12.0) {
+        NSFont *helvetica14 = [NSFont fontWithName:@"Helvetica" size:14.0];
+        if (helvetica14) {
+            [NSFont setUserFont:helvetica14];
+        }
+    }
+
 	#if __LP64__
 		// At some point during 32-to-64 bit transition of TextEdit, some versions erroneously wrote out the value of -1 to defaults. These values cause grief throughout the program under 64-bit, so it's best to clean them out from defaults permanently. Note that it's often considered bad form to write defaults while launching; however, here we do this only once, ever.
 		NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

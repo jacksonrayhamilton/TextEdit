@@ -192,8 +192,11 @@
     [defaults removeObjectForKey:UseInlineCSS];
     [self didChangeValueForKey:@"HTMLStylingMode"];
     
-    [self setRichTextFont:nil];
-    [self setPlainTextFont:nil];
+    // Set fonts to custom defaults instead of nil to avoid system defaults
+    NSFont *menlo14 = [NSFont fontWithName:@"Menlo-Regular" size:14.0];
+    NSFont *helvetica14 = [NSFont fontWithName:@"Helvetica" size:14.0];
+    [self setRichTextFont:helvetica14];
+    [self setPlainTextFont:menlo14];
     
     [[NSUserDefaultsController sharedUserDefaultsController] revertToInitialValues:nil];    // For the rest of the defaults
 }
